@@ -12,7 +12,7 @@ const Transacciones =()=> {
     }, [])
 
     return (
-        <div>
+        <div className='containerformulario'>
             <div>
                 <h1>Transacciones</h1>
                 <div className="stats-con d-flex justify-content-around">

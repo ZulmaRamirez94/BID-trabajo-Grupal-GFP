@@ -1,0 +1,33 @@
+
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    background-image: url("../img/fondo5.jpg "); 
+    background-repeat: no-repeat;
+    background-position: 0px 30px;
+    background-size:cover;
+}
+
+img {
+    width: 120px;
+    height: 120px;
+    margin: 2px;
+    border-radius: 10% 5%;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font: bold;
+    color: var(--primary-color);
+}
+
+.finanzas {
+    width: 300px;
+}
+
+.containerformulario {
+    background-color: rgba(143, 238, 114, 0.4);
+    border-radius: 15px 15px;
+    list-style: none;
+    padding: 2rem 1.5rem;
+}

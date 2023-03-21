@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useGlobalContext } from '../../context/Context';
 import IngresoForm from './IngresoForm';
 import IngresoItem from './IngresoItem';
+import '../../Assets/css/style.css';
 
 const Ingreso = ()=> {
     const {incomes, getIncomes, deleteIncome, totalIncome} = useGlobalContext()
@@ -11,7 +12,7 @@ const Ingreso = ()=> {
     }, [getIncomes])
     
     return (
-        <div  className='container'>
+        <div  className='containerformulario'>
             <h1>Ingresos</h1>
             <div>
                 <div className="d-flex justify-content-around">

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useGlobalContext } from '../../context/Context';
 import IngresoItem from '../ingreso/IngresoItem';
 import GastoForm from '../gasto/GastoForm';
+import '../../Assets/css/style.css';
 
 const Gasto = ()=> {
     const {expenses, getExpenses, deleteExpense, totalExpenses } = useGlobalContext()
@@ -10,12 +11,12 @@ const Gasto = ()=> {
         getExpenses()
     }, [getExpenses])
     return (
-        <div className='container'>
-            <h1>Gastos</h1>
+        <div className='containerformulario m-2'>
+            <h1 className='ml-10 bg-light w-25 rounded-3 position-center'>Gastos</h1>
             <div className="d-flex justify-content-around">
                 <div>
                     <GastoForm />
-                    <h2 className="total-income ">Total Gasto: <span>${totalExpenses()}</span></h2>
+                    <h2 className="m-2 position-relative ">Total Gasto: <span>Gs. {totalExpenses()}</span></h2>
                 </div>
                 <div>
                     <h1>Historial</h1>
