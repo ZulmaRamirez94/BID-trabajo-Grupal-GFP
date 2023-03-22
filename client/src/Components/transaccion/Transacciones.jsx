@@ -9,7 +9,7 @@ const Transacciones =()=> {
     useEffect(() => {
         getIncomes()
         getExpenses()
-    }, [])
+    }, [getIncomes, getExpenses])
 
     return (
         <div className='containerformulario'>
