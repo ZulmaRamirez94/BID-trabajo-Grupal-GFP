@@ -19,37 +19,9 @@ ChartJS.register(ArcElement, Tooltip, Legend, Colors);
   
 function Chart() {
     const {incomes, expenses} = useGlobalContext()
+ 
 
-    /*const data = {
-        labels: incomes.map((inc) =>{
-            const {date} = inc
-            return dateFormat(date)
-        }),
-        datasets: [
-            {
-                label: 'Income',
-                data: [
-                    ...incomes.map((income) => {
-                        const {amount} = income
-                        return amount
-                    })
-                ],
-                backgroundColor: 'green',
-                tension: .2
-            },
-            {
-                label: 'Expenses',
-                data: [
-                    ...expenses.map((expense) => {
-                        const {amount} = expense
-                        return amount
-                    })
-                ],
-                backgroundColor: 'red',
-                tension: .2
-            }
-        ]
-    }*/
+    
       const data = {
         labels: incomes.map((inc) =>{
             const {date} = inc
@@ -64,8 +36,17 @@ function Chart() {
                         return amount
                     })
                 ],
-             Colors,
-                hoverOffset: 4
+                backgroundColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(127, 255, 0)',
+                    'rgb(255, 205, 86)',
+                    'rgb(205, 92, 205)'
+                    
+                  ],
+                hoverOffset: 4,
+                borderRadius : 10,
+                spacing: 10
+                   
             },
             {
                 label: 'Expenses',
@@ -75,11 +56,29 @@ function Chart() {
                         return amount
                     })
                 ],
-               Colors,
-                hoverOffset: 4
+                backgroundColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(54, 162, 235)',
+                    'rgb(255, 205, 86)',
+                    'rgb(205, 92, 205)'
+                    
+                  ],
+                hoverOffset: 4,
+                borderRadius : 10,
+                spacing: 10,
+                options : {
+                cutout: 115
+                }
             }
+            
+            
+            
         ]
+        
     }
+    
+
+    
     return (
         <div style={{width: "700px", height: "400px"}} >
             <Doughnut data={data} />

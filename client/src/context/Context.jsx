@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react"
 import axios from 'axios'
+//import Swal from 'sweetalert'
 
 const Context = React.createContext()
 
@@ -14,7 +15,8 @@ export const GlobalProvider = ({children}) => {
         try{
         await axios.post(`${process.env.REACT_APP_API_URL}/addIncome`, income)
         }catch (err){
-            setError(err.response.data.message)
+            
+           setError(err.response.data.message)
         }
         getIncomes()
     }
@@ -81,9 +83,8 @@ export const GlobalProvider = ({children}) => {
             return new Date(b.createdAt) - new Date(a.createdAt)
         })
 
-        return history.slice(0, 3)
+        return history.slice(0, 4)
     }
-
 
     return (
         <Context.Provider value={{
