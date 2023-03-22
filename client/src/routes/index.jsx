@@ -5,6 +5,9 @@ import NotFund from "../pages/NotFund";
 import Ingreso from "../Components/ingreso/Ingreso";
 import Gasto from "../Components/gasto/Gasto";
 import Transacciones from "../Components/transaccion/Transacciones";
+import Register from "../pages/Register";
+import Login from "../pages/Login";
+import Logout from "../Components/logout/Logout";
 
 export default createBrowserRouter([
     {
@@ -28,7 +31,18 @@ export default createBrowserRouter([
                 path:'gestor/transacciones',
                 element: <Transacciones/>
             },
-            
+            {
+                path:'register',
+                element: <Register />
+            },
+            {
+                path:'login',
+                element: <Login />
+            },
+            {
+                path:'logout',
+                element: <Logout />
+            },
 
         ]
     }

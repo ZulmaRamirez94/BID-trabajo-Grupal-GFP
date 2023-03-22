@@ -3,11 +3,17 @@ import { useGlobalContext } from '../../context/Context';
 import IngresoForm from './IngresoForm';
 import IngresoItem from './IngresoItem';
 import '../../Assets/css/style.css';
+import { useNavigate } from 'react-router-dom';
 
 const Ingreso = ()=> {
     const {incomes, getIncomes, deleteIncome, totalIncome} = useGlobalContext()
+    const navigate = useNavigate();
 
     useEffect(() =>{
+        //para prroteger la ruta
+        if (!(localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY))) {
+            navigate("/login");
+        }
         getIncomes()
     }, [getIncomes])
     

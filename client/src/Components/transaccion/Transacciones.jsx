@@ -2,11 +2,17 @@ import React, { useEffect } from 'react'
 import { useGlobalContext } from '../../context/Context';
 import Historial from '../../historial/HistorialReciente';
 import Chart from '../Chart/Chart';
+import { useNavigate } from 'react-router-dom';
 
 const Transacciones =()=> {
     const { totalExpenses, totalIncome, totalBalance, getIncomes, getExpenses } = useGlobalContext()
+    const navigate = useNavigate();
 
     useEffect(() => {
+        //para prroteger la ruta
+        if (!(localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY))) {
+            navigate("/login");
+        }
         getIncomes()
         getExpenses()
     }, [])
