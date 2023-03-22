@@ -1,34 +1,26 @@
 import React from 'react'
-import {Chart as ChartJs, 
-    CategoryScale,
-    LinearScale,
-    PointElement,
-    LineElement,
-    Title,
-    Tooltip,
-    Legend,
-    ArcElement,
-} from 'chart.js'
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import { Doughnut } from "react-chartjs-2";
 
-import {Line} from 'react-chartjs-2'
 import { useGlobalContext } from '../../context/Context'
 import { dateFormat } from '../../utils/dateFormat'
+import { Colors } from 'chart.js';
 
-ChartJs.register(
-    CategoryScale,
-    LinearScale,
-    PointElement,
-    LineElement,
-    Title,
+
+
+ChartJS.register(ArcElement, Tooltip, Legend, Colors);
+  ChartJS.register(
+    ArcElement,
     Tooltip,
     Legend,
-    ArcElement,
-)
-
+    Colors,
+  );
+  
+  
 function Chart() {
     const {incomes, expenses} = useGlobalContext()
 
-    const data = {
+    /*const data = {
         labels: incomes.map((inc) =>{
             const {date} = inc
             return dateFormat(date)
@@ -57,12 +49,40 @@ function Chart() {
                 tension: .2
             }
         ]
+    }*/
+      const data = {
+        labels: incomes.map((inc) =>{
+            const {date} = inc
+            return dateFormat(date)
+        }),
+        datasets: [
+            {
+                label: 'Income',
+                data: [
+                    ...incomes.map((income) => {
+                        const {amount} = income
+                        return amount
+                    })
+                ],
+             Colors,
+                hoverOffset: 4
+            },
+            {
+                label: 'Expenses',
+                data: [
+                    ...expenses.map((expense) => {
+                        const {amount} = expense
+                        return amount
+                    })
+                ],
+               Colors,
+                hoverOffset: 4
+            }
+        ]
     }
-
-
     return (
-        <div style={{width: "700px", height: "300px"}} >
-            <Line data={data} />
+        <div style={{width: "700px", height: "400px"}} >
+            <Doughnut data={data} />
         </div>
     )
 }

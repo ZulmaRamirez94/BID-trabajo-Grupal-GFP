@@ -19,15 +19,17 @@ const Ingreso = ()=> {
     
     return (
         <div  className='containerformulario'>
-            <h1>Ingresos</h1>
+            <h1 style={{marginLeft:'130px', marginBottom:'10px', fontFamily:'cursive' }}>Ingresos</h1>
             <div>
                 <div className="d-flex justify-content-around">
                     <div className="form-container">
                         <IngresoForm />
-                        <h2 className="total-income">Total Ingreso: <span>${totalIncome()}</span></h2>
+                        <h2 className="total-income m-2">Total Ingreso:
+                            <sapn style={{ fontSize:'35px', color:'green'}}> Gs. {totalIncome()}</sapn>
+                        </h2>
                     </div>
                     <div className="incomes">
-                        <h1>Historial</h1>
+                        <h1 style={{ fontFamily:'cursive' }}>Historial</h1>
                         {incomes.map((income) => {
                             const {_id, title, amount, date, category, description, type} = income;
                             return <IngresoItem key={_id} id={_id}  title={title}  description={description}  amount={amount}  date={date}  type={type} category={category} deleteItem={deleteIncome} />

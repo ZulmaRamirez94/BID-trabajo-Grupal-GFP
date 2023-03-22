@@ -28,7 +28,7 @@ export default function Logout() {
     return (
         <>
         <Link className="dropdown-item" onClick={handleClick}>
-            Logout
+            <h5 style={{color: 'gray', fontFamily:'cursive' }} >Cerrar Sesión</h5>
         </Link>
         <ToastContainer />
         </>
