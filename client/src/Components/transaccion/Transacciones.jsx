@@ -20,19 +20,19 @@ const Transacciones =()=> {
     return (
         <div className='containerformulario'>
             <div>
-                <h1>Transacciones</h1>
+                <h1 style={{marginLeft:'100px', fontFamily:'cursive' }}>Transacciones</h1>
                 <div className="stats-con d-flex justify-content-around">
-                    <div className="chart-con ">
+                    <div className="chart-con">
                         <Chart />
-                        <div className="amount-con">
-                            <div className="income">
-                                <h2>Total Ingreso :  {totalIncome()}</h2>
+                        <div className="amount-con d-flex ">
+                            <div className="income m-3 ">
+                                <h2 style={{ fontFamily:'cursive' }}>Total Ingreso : <hr/> <sapn style={{ fontSize:'35px', color:'green'}}>Gs. {totalIncome()}</sapn> </h2>
                             </div>
-                            <div className="expense">
-                                <h2>Total Gasto:  {totalExpenses()}</h2>
+                            <div className="expense m-3">
+                                <h2 style={{ fontFamily:'cursive' }}>Total Gasto: <hr/> <sapn style={{ fontSize:'35px', color:'red'}}>Gs. {totalExpenses()}</sapn> </h2>
                             </div>
-                            <div className="balance">
-                                <h2>Total Balance:  {totalBalance()}</h2>
+                            <div className="balance m-3">
+                                <h2 style={{fontFamily:'cursive' }}>Total Balance: <hr/> <sapn style={{ fontSize:'35px', color:'blue'}}>Gs. {totalBalance()}</sapn> </h2>
                             </div>
                         </div>
                     </div>
