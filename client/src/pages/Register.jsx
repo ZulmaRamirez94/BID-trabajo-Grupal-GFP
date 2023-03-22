@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../styles/stylesheet.css";
+import user from "../styles/user.gif";
 import { useNavigate, Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
-const Register =() =>{
+const Register = () => {
     const navigate = useNavigate();
     const toastOptions = {
         position: "bottom-right",
@@ -26,7 +27,7 @@ const Register =() =>{
             navigate("/");
         }
     }, []);
-    
+
     const handleChange = (event) => {
         setValues({ ...values, [event.target.name]: event.target.value });
     };
@@ -34,13 +35,13 @@ const Register =() =>{
     const handleValidation = () => {
         const { password, confirmPassword, username, email } = values;
         if (password !== confirmPassword) {
-            toast.error("Las contraseñas no coinciden",toastOptions);
+            toast.error("Las contraseñas no coinciden", toastOptions);
             return false;
         } else if (username.length < 3) {
-            toast.error("Nombre de Usuario debe tener más de 3 caracteres.",toastOptions);
+            toast.error("Nombre de Usuario debe tener más de 3 caracteres.", toastOptions);
             return false;
         } else if (password.length < 8) {
-            toast.error("La contraseña debe tener al menos 8 caracteres.",toastOptions);
+            toast.error("La contraseña debe tener al menos 8 caracteres.", toastOptions);
             return false;
         } else if (email === "") {
             toast.error("Email es requiredo.", toastOptions);
@@ -78,7 +79,7 @@ const Register =() =>{
             <div className="formContainer">
                 <form className="form-user" onSubmit={(event) => handleSubmit(event)}>
                     <div className="brand">
-                        <h1 className="title-user">.....</h1>
+                        <img className="shadow-lg p-3 mb-5 bg-white rounded" src={user} alt='New User'/>
                     </div>
                     <input className="input-user border border-primary" type="text" placeholder="Nombre de usuario" name="username" onChange={(e) => handleChange(e)} />
                     <input className="input-user border border-primary" type="email" placeholder="Email" name="email" onChange={(e) => handleChange(e)} />
