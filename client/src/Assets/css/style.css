@@ -1,17 +1,19 @@
 
 
 body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
+    font-family: cursive;
     overflow: hidden;
-    /*background-image: url("../img/fondo5.jpg "); */
+    background-image: url("../img/fondo01.jpg ");
     background-repeat: no-repeat;
     background-size:cover;
+    scroll-margin-inline:initial ;
 }
 
 img {
-    width: 120px;
-    height: 120px;
-    margin: 2px;
+    width: 210px;
+    height: 80px;
+    margin: 5px;
     border-radius: 10% 5%;
 }
 

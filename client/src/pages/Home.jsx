@@ -2,7 +2,7 @@ import React from 'react'
 
 const Home = () => {
     return (
-        <div className='home'>¡Bienvenido!</div>
+        <div className='home' data-bs-spy="scroll">¡Bienvenido!</div>
     )
 }
 

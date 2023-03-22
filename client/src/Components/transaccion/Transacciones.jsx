@@ -20,10 +20,11 @@ const Transacciones =()=> {
     return (
         <div className='containerformulario'>
             <div>
-                <h1>Transacciones</h1>
+                <h1 style={{marginLeft:'100px', fontFamily:'cursive' }}>Transacciones</h1>
                 <div className="stats-con d-flex justify-content-around">
-                    <div className="chart-con ">
+                    <div className="chart-con">
                         <Chart />
+<<<<<<< HEAD
                         <div className="amount-con">
                             <div className="income">
                                 <h3>Total Ingreso :  {totalIncome()}</h3>
@@ -33,6 +34,17 @@ const Transacciones =()=> {
                             </div>
                             <div className="balance">
                                 <h3>Total Balance:  {totalBalance()}</h3>
+=======
+                        <div className="amount-con d-flex ">
+                            <div className="income m-3 ">
+                                <h2 style={{ fontFamily:'cursive' }}>Total Ingreso : <hr/> <sapn style={{ fontSize:'35px', color:'green'}}>Gs. {totalIncome()}</sapn> </h2>
+                            </div>
+                            <div className="expense m-3">
+                                <h2 style={{ fontFamily:'cursive' }}>Total Gasto: <hr/> <sapn style={{ fontSize:'35px', color:'red'}}>Gs. {totalExpenses()}</sapn> </h2>
+                            </div>
+                            <div className="balance m-3">
+                                <h2 style={{fontFamily:'cursive' }}>Total Balance: <hr/> <sapn style={{ fontSize:'35px', color:'blue'}}>Gs. {totalBalance()}</sapn> </h2>
+>>>>>>> 1adc066b23d5d51645a1b2d5b0199bb2d5a5499f
                             </div>
                           
                         </div>

@@ -9,17 +9,17 @@ const HistorialReciente = ()=> {
 
     return (
         <div className='container'>
-            <h2 style={{ color:'green', width: '260px' }}>Historial reciente</h2>
+            <h2 style={{width: '320px', marginLeft:'18px', fontFamily:'cursive' }}>Historial Reciente</h2>
             {history.map((item) => {
                 const { _id, title, amount, type, description } = item
                 return (
 
-                    <table key={_id} className='table table-striped table-hover'>
+                    <table key={_id} className='table table-striped table-hover m-2'>
                         <thead>
                             <tr>
-                                <th>Titulo</th>
-                                <th>Monto</th>
-                                <th>Descripcion</th>
+                                <th style={{ maxheight: '25px', fontSize:'22px', fontFamily:'cursive'}}>Titulo</th>
+                                <th style={{ maxheight: '65px', fontSize:'22px', fontFamily:'cursive'}}>Monto</th>
+                                <th style={{ maxheight: '65px', fontSize:'22px', fontFamily:'cursive'}}>Descripcion</th>
                             </tr>
                         </thead>
                         <tbody>
