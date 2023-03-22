@@ -4,12 +4,12 @@ const IncomeSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true,
-        maxLength: 50
+        maxLength: 20
     },
     amount: {
         type: Number,
         required: true,
-        maxLength: 30,
+     
     },
     type: {
         type: String,

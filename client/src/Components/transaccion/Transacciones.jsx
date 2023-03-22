@@ -26,14 +26,15 @@ const Transacciones =()=> {
                         <Chart />
                         <div className="amount-con">
                             <div className="income">
-                                <h2>Total Ingreso :  {totalIncome()}</h2>
+                                <h3>Total Ingreso :  {totalIncome()}</h3>
                             </div>
                             <div className="expense">
-                                <h2>Total Gasto:  {totalExpenses()}</h2>
+                                <h3>Total Gasto:  {totalExpenses()}</h3>
                             </div>
                             <div className="balance">
-                                <h2>Total Balance:  {totalBalance()}</h2>
+                                <h3>Total Balance:  {totalBalance()}</h3>
                             </div>
+                          
                         </div>
                     </div>
                     <div className="history-con">
