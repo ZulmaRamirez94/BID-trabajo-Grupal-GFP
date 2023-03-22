@@ -72,14 +72,14 @@ const Register = () => {
                 navigate("/");
             }
         }
-    };
+    }
 
     return (
         <>
             <div className="formContainer">
                 <form className="form-user" onSubmit={(event) => handleSubmit(event)}>
                     <div className="brand">
-                        <img className="shadow-lg p-3 mb-5 bg-white rounded" src={user} alt='New User'/>
+                        <img className="shadow-lg p-3 mb-3 bg-white rounded" style={{ width:'85px', height:'85px'}} src={user} alt='New User'/>
                     </div>
                     <input className="input-user border border-primary" type="text" placeholder="Nombre de usuario" name="username" onChange={(e) => handleChange(e)} />
                     <input className="input-user border border-primary" type="email" placeholder="Email" name="email" onChange={(e) => handleChange(e)} />

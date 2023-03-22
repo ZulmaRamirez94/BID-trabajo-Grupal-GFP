@@ -64,9 +64,9 @@ const validateForm = () => {
     return (
         <>
             <div className="formContainer">
-                <form className="form-user" onSubmit={(event) => handleSubmit(event)}>
+                <form className="form-user"  onSubmit={(event) => handleSubmit(event)}>
                     <div className="brand">
-                        <img className="shadow-lg p-3 mb-5 bg-white rounded" src={user} alt='User'/>
+                        <img className="shadow-lg p-3 mb-3 bg-white rounded" style={{ width:'85px', height:'85px'}} src={user} alt='User'/>
                     </div>
                     <input className="input-user border border-primary" type="text" placeholder="Nombre de Usuario" name="username" onChange={(e) => handleChange(e)} min="3" />
                     <input className="input-user border border-primary" type="password" placeholder="Contraseña" name="password" onChange={(e) => handleChange(e)} />
