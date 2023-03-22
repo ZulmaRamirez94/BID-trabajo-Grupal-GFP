@@ -15,7 +15,7 @@ const Transacciones =()=> {
         }
         getIncomes()
         getExpenses()
-    }, [])
+    }, [getIncomes, getExpenses])
 
     return (
         <div className='containerformulario'>
