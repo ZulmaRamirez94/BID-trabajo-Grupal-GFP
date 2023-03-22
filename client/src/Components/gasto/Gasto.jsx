@@ -3,11 +3,17 @@ import { useGlobalContext } from '../../context/Context';
 import IngresoItem from '../ingreso/IngresoItem';
 import GastoForm from '../gasto/GastoForm';
 import '../../Assets/css/style.css';
+import { useNavigate } from 'react-router-dom';
 
 const Gasto = ()=> {
     const {expenses, getExpenses, deleteExpense, totalExpenses } = useGlobalContext()
+    const navigate = useNavigate();
 
     useEffect(() => {
+        //para prroteger la ruta
+        if (!(localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY))) {
+            navigate("/login");
+        }
         getExpenses()
     }, [getExpenses])
     return (

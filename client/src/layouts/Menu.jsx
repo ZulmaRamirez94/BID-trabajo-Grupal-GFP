@@ -2,6 +2,7 @@ import React from 'react';
 import { Link} from 'react-router-dom';
 import logo from '../Assets/img/logofinanzas.png'
 import '../Assets/css/style.css';
+import Logout from '../Components/logout/Logout';
 
 
 
@@ -24,17 +25,17 @@ const Menu = () => {
                                     <Link className="dropdown-item " to="gestor/ingreso"><h6>Agregar Ingreso</h6></Link>
                                     <Link className="dropdown-item " to="gestor/gasto"><h6>Agregar Gasto</h6></Link>
                                     <div className="dropdown-divider"></div>
-                                    
+                                    <Logout />
                                 </ul>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link m-2" to="gestor/transacciones" data-toggle="tooltip" data-placement="bottom" title="transacciones"><h6>Transacciones</h6></Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link m-2" to="/" data-toggle="tooltip" data-placement="bottom" title="Login"><h6>Login</h6></Link>
+                                <Link className="nav-link m-2" to="/login" data-toggle="tooltip" data-placement="bottom" title="Login"><h6>Login</h6></Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link m-2" to="/" data-toggle="tooltip" data-placement="bottom" title="Register"><h6>Register</h6></Link>
+                                <Link className="nav-link m-2" to="/register" data-toggle="tooltip" data-placement="bottom" title="Register"><h6>Register</h6></Link>
                             </li>
                         </ul>
                     </div>

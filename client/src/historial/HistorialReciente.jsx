@@ -9,12 +9,12 @@ const HistorialReciente = ()=> {
 
     return (
         <div className='container'>
-            <h2  style={{ color:'green', width: '260px' }}>Historial reciente</h2>
+            <h2 style={{ color:'green', width: '260px' }}>Historial reciente</h2>
             {history.map((item) => {
                 const { _id, title, amount, type, description } = item
                 return (
 
-                    <table className='table table-striped table-hover'>
+                    <table key={_id} className='table table-striped table-hover'>
                         <thead>
                             <tr>
                                 <th>Titulo</th>
@@ -23,7 +23,7 @@ const HistorialReciente = ()=> {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr key={_id}>
+                            <tr >
                                 <td className='m-2' style={{ color: type === 'expense' ? 'red' : 'green' }}>{title}</td>
                                 <td className='m-2' style={{ color: type === 'expense' ? 'red' : 'green' }}>
                                     {
