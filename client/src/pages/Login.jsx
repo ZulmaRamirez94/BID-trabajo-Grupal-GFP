@@ -4,6 +4,7 @@ import "../styles/stylesheet.css";
 import { useNavigate, Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import login from '../Assets/img/login.jpg';
 
 
 const Login = () => {
@@ -66,7 +67,7 @@ const validateForm = () => {
             <div className="formContainer">
                 <form className="form-user" onSubmit={(event) => handleSubmit(event)}>
                     <div className="brand">
-                        <h1 className="title-user">....</h1>
+                        <h1 className="title-user"><img src={login} alt='logo'/></h1>
                     </div>
                     <input className="input-user border border-primary" type="text" placeholder="Nombre de Usuario" name="username" onChange={(e) => handleChange(e)} min="3" />
                     <input className="input-user border border-primary" type="password" placeholder="Contraseña" name="password" onChange={(e) => handleChange(e)} />

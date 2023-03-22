@@ -28,7 +28,7 @@ export default function Logout() {
     return (
         <>
         <Link className="dropdown-item" onClick={handleClick}>
-            Logout
+            Cerrar Sesión
         </Link>
         <ToastContainer />
         </>
