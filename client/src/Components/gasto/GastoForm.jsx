@@ -52,12 +52,12 @@ const GastoForm = () => {
             <div className="selects input-control">
                 <select required value={category} name="category" className="form-control m-2 " id="category" onChange={handleInput('category')}>
                     <option value="" disabled >Categoria</option>
-                    <option value="education">Servicios Basicos</option>
-                    <option value="groceries">Alimentacion</option>
-                    <option value="health">Salud</option>
-                    <option value="other">Vestimenta</option>
-                    <option value="other">Ocios</option>
-                    <option value="other">Otros</option>
+                    <option value="servicios">Servicios Basicos</option>
+                    <option value="alimentos">Alimentacion</option>
+                    <option value="salud">Salud</option>
+                    <option value="vestimenta">Vestimenta</option>
+                    <option value="ocio">Ocios</option>
+                    <option value="otros">Otros</option>
                 </select>
             </div>
             <div className="input-control">

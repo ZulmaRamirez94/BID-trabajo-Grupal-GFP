@@ -37,13 +37,13 @@ const IngresoForm = () =>{
         <form onSubmit={handleSubmit}>
             {error && <p className='error'>{error}</p>}
             <div className="input-control">
-                <input type="text" className="form-control m-2"  value={title} name={'title'} placeholder="Titulo del ingreso" onChange={handleInput('title')}/>
+                <input type="text" className="form-control m-2"  value={title} name={'title'} required placeholder="Titulo del ingreso" onChange={handleInput('title')}/>
             </div>
             <div className="input-control">
-                <input value={amount} type="number" className="form-control m-2"  name={'amount'} placeholder={'Monto'} onChange={handleInput('amount')} />
+                <input value={amount} type="number" className="form-control m-2"  name={'amount'} required placeholder={'Monto'} onChange={handleInput('amount')} />
             </div>
             <div className="input-control">
-                <DatePicker id='date' className="form-control m-2"  placeholderText='Ingrese fecha' selected={date} dateFormat="dd/MM/yyyy" onChange={(date) => { 
+                <DatePicker id='date' className="form-control m-2"  placeholderText='Ingrese fecha'  required selected={date} dateFormat="dd/MM/yyyy" onChange={(date) => { 
                     setInputState({ ...inputState, date: date })
                 }} />
             </div>
@@ -57,7 +57,7 @@ const IngresoForm = () =>{
                 </select>
             </div>
             <div className="input-control">
-                <textarea name="description" className="form-control m-2"  value={description} placeholder='Ingrese una descripcion' id="description" cols="30" rows="4" onChange={handleInput('description')}></textarea>
+                <textarea name="description" className="form-control m-2"  value={description} required placeholder='Ingrese una descripcion' id="description" cols="30" rows="4" onChange={handleInput('description')}></textarea>
             </div>
             <button className='btn btn-success m-2 ' type='submit'><svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="currentColor" className="bi bi-check-circle" viewBox="0 0 16 16">
             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
